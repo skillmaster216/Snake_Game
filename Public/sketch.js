@@ -1,4 +1,6 @@
-var snake; 
+var snake;
+var fruit;
+var eated = false;
 /*
 	Note: don't use var area, scale or 
 */
@@ -7,7 +9,9 @@ var scl = 40;
 function setup(){
 	createCanvas( 400,400);
 	snake = new Snake();
+	fruit = new fruit();
 	frameRate(10);
+	fruit.pickLocation(width,height);
 }
 
 
@@ -16,6 +20,10 @@ function draw(){
 
 	snake.update();
 	snake.show();
+	if( snake.eat()){
+		fruit.pickLocation();
+	}
+	fruit.show();
 }
 
 function keyPressed(){
