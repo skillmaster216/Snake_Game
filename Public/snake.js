@@ -24,8 +24,8 @@ function Snake(){
 	this.show = () => {
 		fill(255);
 		rect( this.x, this.y, scl, scl);
-		for( let i = 0; i < this.tail.length; i++){
-			rect( this.tail[i][0], this.tail[i][1], scl, scl);
+		for( let tail of this.tail){
+			rect( tail[0], tail[1], scl, scl);
 		}
 	}
 

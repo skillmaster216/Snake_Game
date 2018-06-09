@@ -13,4 +13,5 @@ function fruit() {
 		rect( this.x, this.y, scl, scl);
 	}
 	
+	this.bonus(){}
 }
